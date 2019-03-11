@@ -18,7 +18,7 @@ iOS_ToggleButton switch = new iOS_ToggleButton();
 switch.setBounds(x, y, width, height);
 ```
 
-### Customizable ###
+## Customizable ##
 
 You can also adjust the styling a bit.
 For Example: 

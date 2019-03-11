@@ -28,3 +28,5 @@ iOS_ToggleButton switch = new iOS_ToggleButton(10,true);
 The Arguments **ovalsize** and **autosizing** 
 * ovalSize: regulates circle size.
 * autoSizing: Sets the height to something more beautiful :D.
+
+![Smaller Circle Image](i.imgur.com/qo4E1bF.png)

@@ -18,3 +18,13 @@ iOS_ToggleButton switch = new iOS_ToggleButton();
 switch.setBounds(x, y, width, height);
 ```
 
+### Customizable ###
+
+You can also adjust the styling a bit.
+For Example: 
+```java
+iOS_ToggleButton switch = new iOS_ToggleButton(10,true); 
+```
+The Arguments **ovalsize** and **autosizing** 
+* ovalSize: regulates circle size.
+* autoSizing: Sets the height to something more beautiful :D.

@@ -29,6 +29,5 @@ The Arguments **ovalsize** and **autosizing**
 * ovalSize: regulates circle size.
 * autoSizing: Sets the height to something more beautiful :D.
 
-![Smaller Circle Image](https://i.imgur.com/qo4E1bF.png)
 
 

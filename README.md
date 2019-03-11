@@ -3,7 +3,7 @@ A Java library, that adds a new JToggleButton looking like a iOS Switch
 
 It will probably look like this: 
 
-![Will look like this:](http://i.imgur.com/nlwTIdu.png)
+![Will look like this:](http://i.imgur.com/lAU664V.gif)
 
 
 Settings: Width= 200, Autosize= True, ovalsize= 6
@@ -29,4 +29,6 @@ The Arguments **ovalsize** and **autosizing**
 * ovalSize: regulates circle size.
 * autoSizing: Sets the height to something more beautiful :D.
 
-![Smaller Circle Image](i.imgur.com/qo4E1bF.png)
+![Smaller Circle Image](https://i.imgur.com/qo4E1bF.png)
+
+

@@ -7,3 +7,14 @@ It will probably look like this:
 
 
 Settings: Width= 200, Autosize= True, ovalsize= 6
+
+
+## Usage ##
+
+This is a simple Example.
+
+```java
+iOS_ToggleButton switch = new iOS_ToggleButton();
+switch.setBounds(x, y, width, height);
+```
+

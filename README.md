@@ -1,5 +1,6 @@
 # iOS-JToggle-Switch
-A Java library, that adds a new JToggleButton looking like a iOS Switch
+A Java library, that adds a new JToggleButton looking like a iOS Switch.
+
 [Download]()
 
 It will probably look like this: 

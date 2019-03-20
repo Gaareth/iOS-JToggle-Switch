@@ -1,5 +1,4 @@
 package gareth.iosbutton;
-
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -20,7 +19,7 @@ import javax.swing.border.LineBorder;
 *
 * @author  Gareth
 * @version 1.0
-* @since   2019-03-11 
+* @since   2019-03-20 
 */
 public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 	
@@ -28,7 +27,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 	
 	private boolean filled = true;
 	private boolean state = true;
-	private boolean autosize = false;
+	private boolean autosize = true;
 	private boolean dropshadow = false;
 
 	/**
@@ -115,7 +114,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 	/**
 	 * @param ovalsize Setting the ovalvar corresponding the ovalsize. Smaller -> Bigger Oval Size.
 	 */
-	public void setOvalsize(int ovalsize) {
+	void setOvalsize(int ovalsize) {
 		this.ovalsize = ovalsize;
 	}
 
@@ -129,7 +128,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 
 
 	/**
-	 * @param dropshadow 
+	 * @param dropshadow toggle the state of the dropshadow boolean
 	 */
 	public void setDropshadow(boolean dropshadow) {
 		this.dropshadow = dropshadow;
@@ -192,10 +191,16 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 		this.x = 0;
 		this.y = 0;
 		this.width = width-50;
-		if(autosize)
+		if(autosize == true)
 			this.height = this.width/2-10;
 		else
 			this.height = height;
+		
+		
+		System.out.println(x);
+        System.out.println(width);
+
+        System.out.println(height);
 	}
 	
 
@@ -214,7 +219,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
         
         Shape halfCircle = new Arc2D.Double(x, y, width/2, height, 90, 180, Arc2D.OPEN); // First Semi Circle: (
         
-        Shape halfCircle2 = new Arc2D.Double(x+width/4-10, y, width/2, height, 90, -180, Arc2D.OPEN); //Second Semi Circle: )
+        Shape halfCircle2 = new Arc2D.Double(x+width/4, y, width/2, height, 90, -180, Arc2D.OPEN); //Second Semi Circle: )
         
         g2.setPaint(backgroundColor);
 
@@ -230,7 +235,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
         	g2.draw(lin);
         	g2.draw(lin2);
         }else {
-        	 g.fillRect(x+width/4, y, width/4-10, height); //Rectangle for filling the gap between the Arcs.
+        	 g.fillRect(x+width/4, y, width/4+1, height); //Rectangle for filling the gap between the Arcs.
         }
         
         
@@ -241,7 +246,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
         		g.fillOval(x+width/4+ovalsize-4, y+(ovalsize/2)+1, height-ovalsize, height-ovalsize); // Dropshadown try.
             }
             g2.setPaint(Color.WHITE);
-            g.fillOval(x+width/4+ovalsize-2, y+(ovalsize/2), height-ovalsize, height-ovalsize); // White circle. Adjust it for the position of the circle.
+            g.fillOval(x+width/2-(height-ovalsize)/2+ovalsize, y+(ovalsize/2), height-ovalsize, height-ovalsize); // White circle. Adjust it for the position of the circle.
         }else {
             if(dropshadow) {
             	g2.setPaint(new Color(170, 170, 160, 150));

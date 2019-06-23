@@ -33,5 +33,5 @@ The Arguments **ovalsize** and **autosizing**
 * autoSizing: Sets the height to something more beautiful :D.
 
 ## Download ##
-[Download](https://github.com/Gaareth/iOS-JToggle-Switch/blob/master/iOS-Switch.jar?raw=true)
+[Download](https://github.com/Gaareth/iOS-JToggle-Switch/releases/download/v1.0/iOS-Switch.jar)
 

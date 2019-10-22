@@ -1,4 +1,5 @@
 package gareth.iosbutton;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -29,7 +30,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 	private boolean state = true;
 	private boolean autosize = true;
 	private boolean dropshadow = false;
-
+	private boolean ofLabels=false;
 	/**
 	 * Parameter for setting the size of the oval. Smaller -> Bigger Oval Size.
 	 * Default: 15
@@ -125,6 +126,22 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 	public boolean isDropshadow() {
 		return dropshadow;
 	}
+
+	/**
+	 * @return returns the activation status of the on/off labels
+	 */
+	private boolean isOfLabels() {
+		return ofLabels;
+	}
+
+
+	/**
+	 * @param boolean for the Activation of on/off labels
+	 */
+	private void setOfLabels(boolean ofLabels) {
+		this.ofLabels = ofLabels;
+	}
+
 
 
 	/**
@@ -235,10 +252,21 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
         	g2.draw(lin);
         	g2.draw(lin2);
         }else {
-        	 g.fillRect(x+width/4, y, width/4+1, height); //Rectangle for filling the gap between the Arcs.
+        	g.fillRect(x+width/4, y, width/4+1, height); //Rectangle for filling the gap between the Arcs.
         }
-        
-        
+       
+        if(ofLabels) {
+            g2.setPaint(Color.GRAY);
+            if(!state) {
+                g.drawOval(x+width/2-((height/3)-ovalsize)+width/4-((height/3)-ovalsize), 
+                		(y+(height/2))-((height/3)-ovalsize)/2, (height/3)-ovalsize, (height/3)-ovalsize); // small grray circle.
+            }else {
+                g2.setPaint(Color.WHITE);
+                g.drawLine(x+width/4- width/20, y+height/3, x+width/4- width/20, y+height/2+height/6); //small white line
+            }
+
+        }
+    
         g2.setPaint(Color.WHITE);
         if(state) {
             if(dropshadow) {

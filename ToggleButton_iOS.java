@@ -67,6 +67,19 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 		this.ovalsize = ovalvar;
 	}
 	
+
+	/**
+	 * @param onOffLabels Parameter for activating on / off Labels
+	 * @param autosize Parameter for autosizing the height value.
+
+	 */
+	public ToggleButton_iOS(boolean autosize, boolean onOffLabels) {
+		this();
+		this.ofLabels = onOffLabels;
+		this.autosize = autosize;
+
+	}
+	
 	/**
 	 * @param ovalsize Parameter for setting the size of the oval. Smaller -> Bigger Oval Size.
 	 * @param autosize Parameter for autosizing the height value.
@@ -77,6 +90,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 		this.autosize = autosize;
 	}
 	
+
 	/**
 	 * @param ovalsize Parameter for setting the size of the oval. Smaller -> Bigger Oval Size.
 	 * @param autosize Parameter for autosizing the height value.
@@ -130,7 +144,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 	/**
 	 * @return returns the activation status of the on/off labels
 	 */
-	private boolean isOfLabels() {
+	public boolean isOfLabels() {
 		return ofLabels;
 	}
 
@@ -138,7 +152,7 @@ public class ToggleButton_iOS extends JToggleButton implements MouseListener{
 	/**
 	 * @param boolean for the Activation of on/off labels
 	 */
-	private void setOfLabels(boolean ofLabels) {
+	public void setOfLabels(boolean ofLabels) {
 		this.ofLabels = ofLabels;
 	}
 
